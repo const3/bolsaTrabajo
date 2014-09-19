@@ -222,6 +222,23 @@
                     </execution>
                 </executions>
             </plugin>
+            <!--TOMCAT-->
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat6-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <server>tomcat00</server>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <server>tomcat00</server>
+                </configuration>
+            </plugin>
         </plugins>
         <resources>
             <resource>
@@ -293,6 +310,7 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- Dependencies calculated by AppFuse when running full-source plugin -->
     <!-- Dependencies calculated by AppFuse when running full-source plugin -->
     <dependencies>
         <dependency>
@@ -1017,7 +1035,7 @@
         <jdbc.version>9.3-1102-jdbc41</jdbc.version>
         <jdbc.driverClassName>org.postgresql.Driver</jdbc.driverClassName>
         <jdbc.url>jdbc:postgresql://localhost/${db.name}?createDatabaseIfNotExist=true&amp;amp;useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;autoReconnect=true</jdbc.url>
-        <jdbc.username>postgres</jdbc.username>
+        <jdbc.username>bolsaTrabajo</jdbc.username>
         <jdbc.password>3337</jdbc.password>
 
         <!-- Properties calculated by AppFuse when running full-source plugin -->
