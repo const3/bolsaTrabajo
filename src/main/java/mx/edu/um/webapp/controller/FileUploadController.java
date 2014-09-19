@@ -1,6 +1,6 @@
 package mx.edu.um.webapp.controller;
 
-import org.appfuse.Constants;
+import mx.edu.um.Constants;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;

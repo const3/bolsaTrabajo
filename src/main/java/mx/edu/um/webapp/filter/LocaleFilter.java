@@ -1,6 +1,6 @@
 package mx.edu.um.webapp.filter;
 
-import org.appfuse.Constants;
+import mx.edu.um.Constants;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
 

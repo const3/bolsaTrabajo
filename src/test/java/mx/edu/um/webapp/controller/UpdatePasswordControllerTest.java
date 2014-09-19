@@ -6,8 +6,8 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import org.apache.commons.lang.RandomStringUtils;
-import org.appfuse.model.User;
-import org.appfuse.service.UserManager;
+import mx.edu.um.model.User;
+import mx.edu.um.service.UserManager;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mock.web.MockHttpServletRequest;

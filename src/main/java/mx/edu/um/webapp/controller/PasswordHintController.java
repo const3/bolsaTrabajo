@@ -2,9 +2,9 @@ package mx.edu.um.webapp.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.appfuse.model.User;
-import org.appfuse.service.MailEngine;
-import org.appfuse.service.UserManager;
+import mx.edu.um.model.User;
+import mx.edu.um.service.MailEngine;
+import mx.edu.um.service.UserManager;
 import mx.edu.um.webapp.util.RequestUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;

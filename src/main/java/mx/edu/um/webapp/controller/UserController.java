@@ -1,8 +1,8 @@
 package mx.edu.um.webapp.controller;
 
-import org.appfuse.Constants;
-import org.appfuse.dao.SearchException;
-import org.appfuse.service.UserManager;
+import mx.edu.um.Constants;
+import mx.edu.um.dao.SearchException;
+import mx.edu.um.service.UserManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ExtendedModelMap;

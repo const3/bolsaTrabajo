@@ -1,6 +1,6 @@
 package mx.edu.um.webapp.listener;
 
-import org.appfuse.model.User;
+import mx.edu.um.model.User;
 import org.springframework.security.authentication.AuthenticationTrustResolver;
 import org.springframework.security.authentication.AuthenticationTrustResolverImpl;
 import org.springframework.security.core.Authentication;

@@ -1,8 +1,8 @@
 package mx.edu.um.webapp.controller;
 
-import org.appfuse.Constants;
-import org.appfuse.model.User;
-import org.appfuse.service.UserManager;
+import mx.edu.um.Constants;
+import mx.edu.um.model.User;
+import mx.edu.um.service.UserManager;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mock.web.MockHttpServletRequest;

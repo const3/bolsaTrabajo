@@ -5,10 +5,10 @@ import java.util.Locale;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.appfuse.Constants;
-import org.appfuse.model.User;
-import org.appfuse.service.RoleManager;
-import org.appfuse.service.UserExistsException;
+import mx.edu.um.Constants;
+import mx.edu.um.model.User;
+import mx.edu.um.service.RoleManager;
+import mx.edu.um.service.UserExistsException;
 import mx.edu.um.webapp.util.RequestUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailException;

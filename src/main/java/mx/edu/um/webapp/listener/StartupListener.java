@@ -2,9 +2,9 @@ package mx.edu.um.webapp.listener;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.appfuse.Constants;
-import org.appfuse.service.GenericManager;
-import org.appfuse.service.LookupManager;
+import mx.edu.um.Constants;
+import mx.edu.um.service.GenericManager;
+import mx.edu.um.service.LookupManager;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.security.authentication.AuthenticationProvider;
