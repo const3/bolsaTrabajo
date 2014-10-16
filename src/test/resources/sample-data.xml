@@ -119,4 +119,27 @@
             <value description="role_id">-2</value>
         </row>
     </table>
+    <!--Pais-START-->
+    <table name="paises">
+        <column>id</column>
+        <column>nombre</column>
+        <column>version</column>
+    <row>
+        <value description="id">-1</value>
+        <value description="nombre">LhQvZyHzFrYiSbLpGeItFxUcExQjJgVyTiWwXyWbDeLsOcEqQo</value>
+        <value description="version">1</value>
+    </row>
+    <row>
+        <value description="id">-2</value>
+        <value description="nombre">SbEvOwUaIaHvXgMrXeGpMpHqWfXlKtXeEmHqWhXrQgGiTeXaHy</value>
+        <value description="version">1</value>
+    </row>
+    <row>
+        <value description="id">-3</value>
+        <value description="nombre">NqEtObWhKzKaAsPlJpZgLsSsVyBiApNuAoUeDiPkByFeHqPiEg</value>
+        <value description="version">1</value>
+    </row>
+    </table>
+    <!--Pais-END-->
 </dataset>
+

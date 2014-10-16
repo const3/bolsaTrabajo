@@ -31,7 +31,7 @@ public class Pais extends BaseObject implements Serializable{
     
     private Long id;
     private String nombre;
-    private byte[] icono_bandera;
+    //private byte[] icono_bandera;
     private Integer version;
 
     /**
@@ -52,15 +52,15 @@ public class Pais extends BaseObject implements Serializable{
     public String getNombre() {
         return nombre;
     }
-
-    /**
-     * @return the icono_bandera
-     */
-    @Column(name = "icono_bandera")
-    @Field
-    public byte[] getIcono_bandera() {
-        return icono_bandera;
-    }
+//
+//    /**
+//     * @return the icono_bandera
+//     */
+//    @Column(name = "icono_bandera")
+//    @Field
+//    public byte[] getIcono_bandera() {
+//        return icono_bandera;
+//    }
 
     /**
      * @return the version
@@ -84,12 +84,12 @@ public class Pais extends BaseObject implements Serializable{
         this.nombre = nombre;
     }
 
-    /**
-     * @param icono_bandera the icono_bandera to set
-     */
-    public void setIcono_bandera(byte[] icono_bandera) {
-        this.icono_bandera = icono_bandera;
-    }
+//    /**
+//     * @param icono_bandera the icono_bandera to set
+//     */
+//    public void setIcono_bandera(byte[] icono_bandera) {
+//        this.icono_bandera = icono_bandera;
+//    }
 
     /**
      * @param version the version to set

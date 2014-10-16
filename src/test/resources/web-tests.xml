@@ -24,7 +24,7 @@
 
     <!-- runs all targets -->
     <target name="run-all-tests" 
-        depends="Login,Logout,PasswordHint,Signup,UserTests,StaticPages,WebServices,DWR,FileUpload"
+        depends="Login,Logout,PasswordHint,Signup,UserTests,StaticPages,WebServices,DWR,FileUpload,PaisTests"
         description="Call and executes all test cases (targets)"/>
     
     <!-- runs user-related tests -->
@@ -255,4 +255,101 @@
             </steps>
         </webtest>
     </target>
+    <!--Pais-START-->
+    <!-- runs pais-related tests -->
+    <target name="PaisTests"
+            depends="SearchPaiss,EditPais,SavePais,AddPais,DeletePais"
+            description="Call and executes all pais test cases (targets)">
+        <echo>Successfully ran all Pais UI tests!</echo>
+    </target>
+
+    <!-- Verify the paiss list screen displays without errors -->
+    <target name="SearchPaiss" description="Tests search for and displaying all paiss">
+        <webtest name="searchPaiss">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click View Pais link" url="/paiss"/>
+                <verifytitle description="we should see the paisList title"
+                    text=".*${paisList.title}.*" regex="true"/>
+                <setinputfield description="set search term" name="q" value="*"/>
+                <clickbutton label="${button.search}" description="Click Search"/>
+                <verifytitle description="we should see the paisList title"
+                    text=".*${paisList.title}.*" regex="true"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Verify the edit pais screen displays without errors -->
+    <target name="EditPais" description="Tests editing an existing Pais's information">
+        <webtest name="editPais">
+            &config;
+            <steps>
+                &login;
+                <invoke description="View Pais List" url="/paiss"/>
+                <clicklink label="-1" description="Click edit link"/>
+                <verifytitle description="we should see the paisDetail title"
+                    text=".*${paisDetail.title}.*" regex="true"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Edit a pais and then save -->
+    <target name="SavePais" description="Tests editing and saving a pais">
+        <webtest name="savePais">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Edit Pais link" url="/paisform?id=-1"/>
+                <verifytitle description="we should see the paisDetail title"
+                    text=".*${paisDetail.title}.*" regex="true"/>
+
+                <!-- update some of the required fields -->
+                <setInputField description="set nombre" name="nombre" value="FxBtIuQeMtKgLhSfMsFvKlViHkBcIoIbIpVsHhXrShKwQxBdAm"/>
+
+                <clickbutton label="${button.save}" description="Click Save"/>
+                <verifytitle description="Page re-appears if save successful"
+                    text=".*${paisDetail.title}.*" regex="true"/>
+                <verifytext description="verify success message" text="${pais.updated}"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Add a new Pais -->
+    <target name="AddPais" description="Adds a new Pais">
+        <webtest name="addPais">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Add Button" url="/paisform"/>
+                <verifytitle description="we should see the paisDetail title"
+                    text=".*${paisDetail.title}.*" regex="true"/>
+
+                <!-- enter required fields -->
+                <setInputField description="set nombre" name="nombre" value="RnIcMgUdBcMcWcUqYcIdEgHuBsRqNuOjUdPjYfUmQtStKlAhNy"/>
+
+                <clickbutton label="${button.save}" description="Click button 'Save'"/>
+                <verifytitle description="Pais List appears if save successful"
+                    text=".*${paisList.title}.*" regex="true"/>
+                <verifytext description="verify success message" text="${pais.added}"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Delete existing pais -->
+    <target name="DeletePais" description="Deletes existing Pais">
+        <webtest name="deletePais">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Edit Pais link" url="/paisform?id=-1"/>
+                <prepareDialogResponse description="Confirm delete" dialogType="confirm" response="true"/>
+                <clickbutton label="${button.delete}" description="Click button 'Delete'"/>
+                <verifyNoDialogResponses/>
+                <verifytitle description="display Pais List" text=".*${paisList.title}.*" regex="true"/>
+                <verifytext description="verify success message" text="${pais.deleted}"/>
+            </steps>
+        </webtest>
+    </target>    <!--Pais-END-->
 </project>
+

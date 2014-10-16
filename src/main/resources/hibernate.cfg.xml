@@ -8,5 +8,6 @@
     <session-factory>
         <mapping class="mx.edu.um.model.User"/>
         <mapping class="mx.edu.um.model.Role"/>
+        <mapping class="mx.edu.um.model.Pais"/>
     </session-factory>
 </hibernate-configuration>

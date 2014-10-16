@@ -12,6 +12,9 @@
     <menu:displayMenu name="UserMenu"/>
     <menu:displayMenu name="AdminMenu"/>
     <menu:displayMenu name="Logout"/>
+    <!--Pais-START-->
+    <menu:displayMenu name="PaisMenu"/>
+    <!--Pais-END-->
 </ul>
 </div>
 </menu:useMenuDisplayer>

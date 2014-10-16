@@ -50,5 +50,12 @@
                 <arg key="user.password"/>
             </field>
         </form>
+        <!--Pais-START-->
+        <form name="pais">
+            <field property="nombre" depends="required">
+                <arg key="pais.nombre"/>
+            </field>
+        </form>
+        <!--Pais-END-->
     </formset>
 </form-validation>
