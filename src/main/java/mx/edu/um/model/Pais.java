@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package mx.edu.um.general.model;
+package mx.edu.um.model;
 
 import java.io.Serializable;
 import javax.persistence.Column;

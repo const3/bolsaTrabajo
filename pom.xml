@@ -990,7 +990,7 @@
         <copyright.year>2014</copyright.year>
         <dao.framework>hibernate</dao.framework>
         <web.framework>spring</web.framework>
-        <amp.genericCore>true</amp.genericCore>
+        <amp.genericCore>false</amp.genericCore>
         <amp.fullSource>true</amp.fullSource>
         <db.name>bolsaTrabajo</db.name>
 
